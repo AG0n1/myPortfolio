@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    -webkit-user-select: none;
+}
+
+html {
+    background: #1d6230;
+}
+
+a {
+    text-decoration: none;
+    color: #0e2814;
+}
+
+header {
+    display: flex;
+    height: 6vh;
+}
+
+span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    width: 20%;
+    font-size: 1.4vw;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #0e2814;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 94vh;
+    color: #0e2814;
+
+}
+
+.js-bg {
+    width: 7.5vw;
+    border: 1px solid #1f562d;
+    height: 10vw;
+    border-radius: 4%;
+    background: #1f562d;
+}
+
+.main > div {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.ace_kard {
+    background-size: cover;
+    background-position: center;
+}
+
+.kard {
+    width: 7.5vw;
+    height: 10vw;
+    border-radius: 2%;
+}
+
+.queen_kard {
+    background-size: cover;
+    background-position: center;
+}
+
+.king_kard {
+    background-size: cover;
+    background-position: center;
+    cursor: move;
+}
+
+.hide {
+    display: none;
+}
+
+.hovered {
+    box-shadow: 0px 0px 20px #30fc03;
+}

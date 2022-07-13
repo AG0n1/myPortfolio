@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" >
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+    <title>"САЛИЧЕСКИЙ ЗАКОН"</title>
+  </head>
+  <body>
+  <header>
+        <span onclick="newGame()" id="newGame">
+            Новая Игра
+        </span>
+    <span onclick="cancel()">
+            Отмена хода
+        </span>
+    <span onclick="exit()">
+            Выход
+        </span>
+    <span>
+            <a href="assets/Rules/rules.html" target="_blank">
+                Правила Игры
+            </a>
+        </span>
+    <span>
+            <a href="assets/Developers/developers.html" target="_blank">
+                Про создателей
+            </a>
+        </span>
+  </header>
+
+  <div class="main"  ondrop="dropEvent(this.id)">
+
+    <h1>САЛИЧЕСКИЙ ЗАКОН</h1>
+
+    <h2 class="name">Дамы</h2>
+    <div class="queen">
+      <div class="js-bg">
+        <div class="queen_kard kard" id="queen1" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="queen_kard kard" id="queen2" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="queen_kard kard" id="queen3" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="queen_kard kard" id="queen4" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="queen_kard kard" id="queen5" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="queen_kard kard" id="queen6" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="queen_kard kard" id="queen7" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="queen_kard kard" id="queen8" >
+
+        </div>
+      </div>
+    </div>
+
+    <h2 class="name">Тузы</h2>
+    <div class="ace">
+      <div class="js-bg">
+        <div class="ace_kard kard"
+             ondragend="dragEnd(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             id="ace1" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="ace_kard kard"
+             ondragend="dragEnd(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             id="ace2" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="ace_kard kard"
+             ondragend="dragEnd(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             id="ace3" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="ace_kard kard"
+             ondragend="dragEnd(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             id="ace4" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="ace_kard kard"
+             ondragend="dragEnd(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             id="ace5" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="ace_kard kard"
+             ondragend="dragEnd(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             id="ace6" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="ace_kard kard"
+             ondragend="dragEnd(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             id="ace7" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="ace_kard kard"
+             ondragend="dragEnd(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             id="ace8" >
+
+        </div>
+      </div>
+    </div>
+
+    <h2 class="name">Короли</h2>
+    <div class="king">
+      <div class="js-bg">
+        <div class="king_kard kard"
+             draggable = 'true'
+             ondragstart="dragEvent(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             ondragend="dragEnd(this.id)"
+             onmousedown="dragPrevent(this.id)"
+             id="king0" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="king_kard kard"
+             draggable = 'true'
+             ondragstart="dragEvent(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             ondragend="dragEnd(this.id)"
+             onmousedown="dragPrevent(this.id)"
+             id="king1" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="king_kard kard"
+             draggable = 'true'
+             ondragstart="dragEvent(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             ondragend="dragEnd(this.id)"
+             onmousedown="dragPrevent(this.id)"
+             id="king2" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="king_kard kard"
+             draggable = 'true'
+             ondragstart="dragEvent(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             ondragend="dragEnd(this.id)"
+             onmousedown="dragPrevent(this.id)"
+             id="king3" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="king_kard kard"
+             draggable = 'true'
+             ondragstart="dragEvent(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             ondragend="dragEnd(this.id)"
+             onmousedown="dragPrevent(this.id)"
+             id="king4" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="king_kard kard"
+             draggable = 'true'
+             ondragstart="dragEvent(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             ondragend="dragEnd(this.id)"
+             onmousedown="dragPrevent(this.id)"
+             id="king5" >
+
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="king_kard kard"
+             draggable = 'true'
+             ondragstart="dragEvent(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             ondragend="dragEnd(this.id)"
+             onmousedown="dragPrevent(this.id)"
+             id="king6" >
+        </div>
+      </div>
+      <div class="js-bg">
+        <div class="king_kard kard"
+             draggable="true"
+             ondragstart="dragEvent(this.id)"
+             ondrop="dropEvent(this.id)"
+             ondragover="dragOver()"
+             ondragenter="dragEnter(this.id)"
+             ondragleave="dragLeave(this.id)"
+             ondragend="dragEnd(this.id)"
+             onmousedown="dragPrevent(this.id)"
+             id="king7" >
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+  <script src="cards.js" ></script>
+
+  </body>
+</html>

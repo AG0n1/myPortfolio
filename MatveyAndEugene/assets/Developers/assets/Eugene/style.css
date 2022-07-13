@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: #737373;
+    padding: 2vw;
+}
+
+.photo {
+    width: 30%;
+    height: 29vw;
+    background: url(Eugene_preveiw1.jpg) ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    float: left;
+    margin-right: 40px;
+}
+
+.info > h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 10px;
+}
+
+.info > h2 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.button-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.button-hover:hover > .button {
+    left: 40px;
+    background: #545454;
+    color: aliceblue;
+    transition: .5s;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: transparent;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    top: 40px;
+    left: 0px;
+    transition: .5s;
+}
