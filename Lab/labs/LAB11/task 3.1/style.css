@@ -1,0 +1,42 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    margin: 20px auto;
+    background: #cff04a;
+    box-shadow: 0px 0px 15px #708a0a;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 37%;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    background: #c2ed15;
+    margin-left: 37%;
+    box-shadow: inset 0px 0px 15px #708a0a;
+    font-size: 30px;
+}
+
+p {
+    margin: 30px;
+}
+
+.main {
+    width: 100%;
+    height: 2000px;
+    background: #c2ed15;
+}

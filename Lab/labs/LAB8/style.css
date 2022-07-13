@@ -1,0 +1,65 @@
+p {
+    font-size: 25px;
+    line-height: 0.7;
+    margin: 5%;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 5px;
+    font-size: 30px;
+}
+
+h3 {
+    margin: auto;
+}
+
+hr {
+    margin: 7px;
+}
+
+input {
+    border: 3px solid red;
+}
+
+button {
+    margin: 10px;
+}
+
+.button_task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: none;
+}
+
+.p_tasks {
+    font-size: 20px;
+    font-style: italic;
+    margin: 20px;
+}
+
+#p_task_5 {
+    font-size: 20px;
+}
+
+table {
+    border-spacing: 0;
+    margin-left: 5%;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0;
+}
