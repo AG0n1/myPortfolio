@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab 8</title>
+</head>
+
+<body>
+    <h1>Задание 1</h1>
+    <h2>Часть А</h2>
+    <p class="p_tasks">
+        Дан инпут. В него вводятся числа через запятую. По потери фокуса найдите
+        среднее арифметическое этих чисел (сумма делить на количество).
+    </p>
+    <div class="tasks" id="task_1">
+        <input type="text" id="input_task_1">
+        <br>
+        <button onclick="button_1()">Нажмите на меня</button>
+    </div>
+
+    <h2>Часть Б</h2>
+    <p class="p_tasks">
+        Даны N абзацев с числами. По нажатию на кнопку выведите эти числа в
+        инпут через запятую в порядке возрастания.
+    </p>
+    <div class="task" id="task_2">
+        <p class="p_task_2">1</p>
+        <p class="p_task_2">5</p>
+        <p class="p_task_2">2</p>
+        <p class="p_task_2">6</p>
+        <p class="p_task_2">3</p>
+        <p class="p_task_2">9</p>
+        <button id="button_task_2" class="button_task" onclick="button_2()">
+            <h3>Нажми на меня</h3>
+        </button>
+        <p id="p_task_2_result">Тут будет результат: </p>
+    </div>
+
+    <hr>
+
+    <h1>Задание 2</h1>
+    <h2>Часть А</h2>
+    <p class="p_tasks">
+        Дан инпут. Даны абзацы. Пусть в этот инпут записывается суммарное
+        количество нажатий по этим абзацам.
+    </p>
+    <div class="task" id="task_3">
+        <p class="p_task_3">1</p>
+        <p class="p_task_3">2</p>
+        <p class="p_task_3">3</p>
+        <p class="p_task_3">4</p>
+        <p class="p_task_3">5</p>
+        <p class="p_task_3">6</p>
+        <input id="input_task_3" type="text">
+        <button id="button_task_3" class="button_task" onclick="button_3()">
+            <h3>Нажми на меня</h3>
+        </button>
+    </div>
+
+    <h2>Часть Б</h2>
+    <p class="p_tasks">
+        Дан абзац. Сделайте так, чтобы каждую секунду он менял свой цвет с
+        красного на синий и наоборот.
+    </p>
+    <div class="task" id="task_4">
+        <p id="p_task_4">2</p>
+        <button class="button_task" onclick="button_4()">
+            <h3>Нажми на меня</h3>
+        </button>
+    </div>
+    <hr>
+
+    <h1>Задание 3</h1>
+    <p class="p_tasks">
+        Спросите у пользователя какие языки (html, css, js, php) он знает с помощью
+        чекбоксов. Выбранные языки должны выводится в абзац ниже через
+        запятую.
+    </p>
+
+    <div class="task">
+        <ol>
+            <li>html <input value="html" type="checkbox" class="input_task_5"> </li>
+            <li>css <input value="css" type="checkbox" class="input_task_5"> </li>
+            <li>js <input value="js" type="checkbox" class="input_task_5"> </li>
+            <li>php <input value="php" type="checkbox" class="input_task_5"> </li>
+        </ol>
+        <p id="p_task_5">
+
+        </p>
+        <button class="button_task" onclick="button_5()">
+            <h3>Нажми на меня</h3>
+        </button>
+    </div>
+    <hr>
+
+    <h1>Задание 4</h1>
+    <p class="p_tasks">
+        Дана таблица с числами. По нажатию на кнопку найдите ячейку, в которой
+        хранится максимальное число, и сделайте ее фон красным.
+    </p>
+
+    <div class="task">
+        <table>
+            <tr>
+                <td class="td_task_5">12</td>
+                <td class="td_task_5">53</td>
+                <td class="td_task_5">24</td>
+                <td class="td_task_5">52</td>
+            </tr>
+            <tr>
+                <td class="td_task_5">23</td>
+                <td class="td_task_5">53</td>
+                <td class="td_task_5">62</td>
+                <td class="td_task_5">15</td>
+            </tr>
+            <tr>
+                <td class="td_task_5">51</td>
+                <td class="td_task_5">26</td>
+                <td class="td_task_5">73</td>
+                <td class="td_task_5">84</td>
+            </tr>
+            <tr>
+                <td class="td_task_5">34</td>
+                <td class="td_task_5">15</td>
+                <td class="td_task_5">25</td>
+                <td class="td_task_5">52</td>
+            </tr>
+            <tr>
+                <td class="td_task_5">9</td>
+                <td class="td_task_5">16</td>
+                <td class="td_task_5">93</td>
+                <td class="td_task_5">74</td>
+            </tr>
+            <tr>
+                <td class="td_task_5">7</td>
+                <td class="td_task_5">25</td>
+                <td class="td_task_5">38</td>
+                <td class="td_task_5">35</td>
+            </tr>
+        </table>
+        <button class="button_task" onclick="button_6()">
+            <h3>Нажми на меня</h3>
+        </button>
+    </div>
+    <hr>
+
+    <h1>Задание 5</h1>
+    <p class="p_tasks">
+        Реализуйте генератор таблиц, ширина и высота таблиц задается в двух
+        инпутах (например, таблица 5 на 10 ячеек).
+    </p>
+
+    <div class="task">
+        <table id="table_task_5">
+
+        </table>
+        <input type="text" placeholder="Задайте ширину" id="for_width">
+        <input type="text" placeholder="Задайте высоту" id="for_height">
+        <button class="button_task" onclick="button_7()">
+            <h3>Нажми на меня</h3>
+        </button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
