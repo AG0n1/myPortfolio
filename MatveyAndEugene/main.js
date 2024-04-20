@@ -105,7 +105,7 @@ let setCardBackGround = id => {
     cardPlace.classList.remove('hovered');
 }
 
-let dragOver = () => {
+let dragOver = (event) => {
     event.preventDefault();
     let cardPlace = document.getElementById(event.target.id);
     cardPlace.style.opacity = '1';
@@ -175,7 +175,6 @@ function newGame() {
         }
 
     });
-
     dragCheck = true;
 }
 
