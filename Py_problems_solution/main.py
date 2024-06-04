@@ -1,37 +1,60 @@
-import numpy as np
+class Planet:
+    def __init__(self, name, distance_from_star):
+        self.name = name
+        self.distance_from_star = distance_from_star
 
-def solve_kramer(A, B):
-    n = len(B)
-    X = np.zeros(n)
+    def __repr__(self):
+        return f"Planet(name='{self.name}', distance_from_star={self.distance_from_star})"
 
-    # Вычисление определителя матрицы коэффициентов
-    det_A = np.linalg.det(A)
+    def __str__(self):
+        return f"{self.name} ({self.distance_from_star} AU)"
 
-    # Решение системы методом Крамера
-    for i in range(n):
-        # Создание копии матрицы коэффициентов для каждого столбца
-        A_i = A.copy()
-        A_i[:, i] = B
+class StarSystem:
+    def __init__(self, name):
+        self.name = name
+        self.planets = []
 
-        # Вычисление определителя для каждой модифицированной матрицы
-        det_A_i = np.linalg.det(A_i)
+    def add_planet(self, planet):
+        self.planets.append(planet)
 
-        # Решение для каждой переменной
-        X[i] = det_A_i / det_A
+    def sort_planets_by_distance(self):
+        self.planets.sort(key=lambda planet: planet.distance_from_star)
 
-    return X
+    def find_planets_in_distance_range(self, min_distance, max_distance):
+        return [planet for planet in self.planets if min_distance <= planet.distance_from_star <= max_distance]
 
-# Исходная система уравнений
-A = np.array([[1, 1, 1, -2],
-              [2, -1, -9, 4],
-              [3, 2, -1, 5],
-              [11, 1, 6, 15]], dtype=float)
+    def __repr__(self):
+        return f"StarSystem(name='{self.name}', planets={self.planets})"
 
-B = np.array([3, 6, 1, -9], dtype=float)
+    def __str__(self):
+        planets_str = ', '.join(str(planet) for planet in self.planets)
+        return f"Star System: {self.name}\nPlanets: {planets_str}"
 
-# Решение системы методом Крамера
-solution = solve_kramer(A, B)
+solar_system = StarSystem("Solar System")
 
-# Вывод решения
-print("Решение системы уравнений методом Крамера:", *solution, sep=', ')
+earth = Planet("Earth", 1.0)
+mars = Planet("Mars", 1.5)
+venus = Planet("Venus", 0.7)
+jupiter = Planet("Jupiter", 5.2)
+saturn = Planet("Saturn", 9.5)
 
+solar_system.add_planet(earth)
+solar_system.add_planet(mars)
+solar_system.add_planet(venus)
+solar_system.add_planet(jupiter)
+solar_system.add_planet(saturn)
+
+print("До сортировки:")
+print(solar_system)
+
+solar_system.sort_planets_by_distance()
+
+print("\nПосле сортировки:")
+print(str(solar_system))
+
+min_distance = 0.5
+max_distance = 2.0
+
+planets_in_range = solar_system.find_planets_in_distance_range(min_distance, max_distance)
+print(f"\nPlanets between {min_distance} AU and {max_distance} AU:")
+print(", ".join(str(planet) for planet in planets_in_range))

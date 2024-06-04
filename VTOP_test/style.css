@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-height: 100vh;
+
+    background-color: black;
+}
+
+header {
+    height: 10vh;
+    border: 1px solid;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
